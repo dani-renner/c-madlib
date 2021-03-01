@@ -6,7 +6,7 @@ namespace MadLibs.Controllers
   public class HomeController : Controller
   {
     [Route("/")]
-    public string Placeholder() {return "Madlibs ahoy!";}
+    public ActionResult Home() { return View(); }
     [Route("/form")]
     public ActionResult Form() { return View(); }
 
@@ -18,6 +18,18 @@ namespace MadLibs.Controllers
       myMadLibs.FirstVerb = firstVerb;
       myMadLibs.FirstAdjective = firstAdjective;
       return View(myMadLibs);
+    }
+    [Route("/animalsForm")]
+    public ActionResult AnimalsForm() { return View(); }
+    [Route("/animals")]
+    public ActionResult Animals (string animalNoun, string animalNoun2, string animalVerb, string animalAdjective)
+    {
+      AnimalVariable myAnimalMadLibs = new AnimalVariable();
+      myAnimalMadLibs.AnimalNoun = animalNoun;
+      myAnimalMadLibs.AnimalNoun2 = animalNoun2;
+      myAnimalMadLibs.AnimalVerb = animalVerb;
+      myAnimalMadLibs.AnimalAdjective = animalAdjective;
+      return View(myAnimalMadLibs);
     }
   }
 }

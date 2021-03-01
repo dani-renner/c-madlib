@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Create a MadLib!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    @* <link rel="stylesheet" type="text/css" href="../Styles/styles.css" asp-append-version="true"> *@
+  </head>
+  <body>
+    <h1>Who likes Madlibs?!</h1>
+    <h2><strong>WE</strong> like Madlibs!</h2>
+
+    <form action="/animals" method="post">
+      <label for="animalNoun">Enter a noun:</label>
+      <input id="animalNoun" name="animalNoun" type="text">
+      <label for="animalNoun2">Enter another noun:</label>
+      <input id="animalNoun2" name="animalNoun2" type="text">
+      <label for="animalVerb">Enter a verb:</label>
+      <input id="animalVerb" name="animalVerb" type="text">
+      <label for="animalAdjective">Enter an adjective:</label>
+      <input id="animalAdjective" name="animalAdjective" type="text">
+      <button type="submit">Go!</button>
+    </form>
+  </body>
+</html>
